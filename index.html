@@ -69,11 +69,198 @@
                         <p class="cover-tagline">"Two hearts... Two families... One blessed union under God's grace."</p>
                     </div>
                     
-                    <button class="play-invitation-btn" id="playBtn" aria-label="Enter and Open Invitation">
-                        <span class="btn-ripple"></span>
-                        <span class="btn-text">Open Invitation</span>
-                    </button>
-                    <p class="btn-note">Turn on your audio for worship instrumental</p>
+                    <div class="cover-buttons-container" style="display: flex; flex-direction: column; gap: 12px; width: 100%; max-width: 280px; margin-top: 10px;">
+                        <button class="play-invitation-btn" id="playTrailerBtn" aria-label="Play Cinematic Trailer">
+                            <span class="btn-ripple"></span>
+                            <span class="btn-text">Watch Trailer 🎬</span>
+                        </button>
+                        <button class="play-invitation-btn secondary-btn" id="playBtn" aria-label="Enter and Open Invitation">
+                            <span class="btn-ripple"></span>
+                            <span class="btn-text">Open Invitation ✉️</span>
+                        </button>
+                    </div>
+                    <p class="btn-note">Turn on your audio for the full cinematic experience</p>
+                </div>
+            </div>
+
+            <!-- ================= CINEMATIC TRAILER PLAYER ================= -->
+            <div id="trailerPlayer" class="trailer-player hidden">
+                <!-- Background visual elements overlaying each other, faded in/out by active scene class -->
+                <div class="trailer-viewport">
+                    <!-- Global backdrop elements -->
+                    <div class="trailer-clouds-bg"></div>
+                    <div class="trailer-flare-effect"></div>
+                    
+                    <!-- Scene 1: Heavens Open -->
+                    <div class="trailer-scene scene-1">
+                        <div class="scene-cross-glow">
+                            <svg viewBox="0 0 100 100" class="gold-cross-icon large-glow">
+                                <path d="M50 10v80M25 35h50" stroke="#C5A059" stroke-width="5" stroke-linecap="round"/>
+                                <circle cx="50" cy="35" r="10" fill="none" stroke="#C5A059" stroke-width="2" stroke-dasharray="3, 3"/>
+                            </svg>
+                        </div>
+                    </div>
+                    
+                    <!-- Scene 2: The Grand Reveal (Majestic Church Sunrise) -->
+                    <div class="trailer-scene scene-2">
+                        <div class="church-drone-zoom">
+                            <!-- SVG Majestic Church Skyline -->
+                            <svg viewBox="0 0 200 200" class="church-svg">
+                                <path d="M40,160 L60,110 L80,160 Z" fill="#FAF6F0" stroke="#C5A059" stroke-width="1.5"/>
+                                <path d="M120,160 L140,110 L160,160 Z" fill="#FAF6F0" stroke="#C5A059" stroke-width="1.5"/>
+                                <rect x="80" y="80" width="40" height="80" fill="#EADDC8" stroke="#C5A059" stroke-width="1.5"/>
+                                <path d="M80,80 L100,30 L120,80 Z" fill="#C5A059"/>
+                                <line x1="100" y1="30" x2="100" y2="10" stroke="#C5A059" stroke-width="2"/>
+                                <line x1="93" y1="17" x2="107" y2="17" stroke="#C5A059" stroke-width="2"/>
+                                <path d="M90,160 L90,120 A10,10 0 0,1 110,120 L110,160 Z" fill="#FAF6F0" stroke="#C5A059" stroke-width="1.5"/>
+                            </svg>
+                        </div>
+                        <div class="blooming-roses-overlay"></div>
+                    </div>
+                    
+                    <!-- Scene 3: Invitation Moment (Bible on Altar) -->
+                    <div class="trailer-scene scene-3">
+                        <div class="altar-bible-container">
+                            <div class="candle candle-left">
+                                <div class="candle-flame"></div>
+                            </div>
+                            <div class="altar-bible">
+                                <svg viewBox="0 0 120 80" class="trailer-open-bible-svg">
+                                    <path d="M60,70 C45,65 20,65 10,67 L10,17 C20,15 45,15 60,20 Z" fill="#ffffff" stroke="#C5A059" stroke-width="1.5"/>
+                                    <path d="M60,70 C75,65 100,65 110,67 L110,17 C100,15 75,15 60,20 Z" fill="#ffffff" stroke="#C5A059" stroke-width="1.5"/>
+                                    <path d="M60,20 L60,75 L63,72 L66,75 L66,20 Z" fill="#C5A059"/>
+                                </svg>
+                            </div>
+                            <div class="candle candle-right">
+                                <div class="candle-flame"></div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Scene 4: Hero Entry (Silhouette and Rings) -->
+                    <div class="trailer-scene scene-4">
+                        <div class="floral-arch-silhouette">
+                            <div class="couple-silhouette"></div>
+                        </div>
+                        <div class="rotating-rings-container">
+                            <svg viewBox="0 0 100 60" class="climax-rings">
+                                <ellipse cx="38" cy="30" rx="22" ry="15" fill="none" stroke="#C5A059" stroke-width="3" transform="rotate(-15 38 30)"/>
+                                <ellipse cx="62" cy="30" rx="22" ry="15" fill="none" stroke="#C5A059" stroke-width="3" transform="rotate(15 62 30)"/>
+                            </svg>
+                        </div>
+                    </div>
+                    
+                    <!-- Scene 5: Family Details -->
+                    <div class="trailer-scene scene-5">
+                        <div class="luxury-frame-backdrop"></div>
+                        <div class="scene-cross-small">
+                            <svg viewBox="0 0 100 100" class="gold-cross-icon small">
+                                <path d="M50 20v60M35 38h30" stroke="#C5A059" stroke-width="3.5" stroke-linecap="round"/>
+                            </svg>
+                        </div>
+                    </div>
+                    
+                    <!-- Scene 6: Divine Blessing -->
+                    <div class="trailer-scene scene-6">
+                        <div class="glowing-bible-full">
+                            <svg viewBox="0 0 120 80" class="bible-bright-glow">
+                                <path d="M60,70 C45,65 20,65 10,67 L10,17 C20,15 45,15 60,20 Z" fill="#ffffff" stroke="#C5A059" stroke-width="2"/>
+                                <path d="M60,70 C75,65 100,65 110,67 L110,17 C100,15 75,15 60,20 Z" fill="#ffffff" stroke="#C5A059" stroke-width="2"/>
+                                <circle cx="50" cy="35" r="35" fill="none" stroke="rgba(252, 246, 186, 0.4)" stroke-width="20" class="glow-ring"/>
+                            </svg>
+                        </div>
+                    </div>
+                    
+                    <!-- Scene 7: Date Reveal -->
+                    <div class="trailer-scene scene-7">
+                        <div class="golden-clock-container">
+                            <svg viewBox="0 0 100 100" class="golden-clock-svg">
+                                <circle cx="50" cy="50" r="45" fill="none" stroke="#C5A059" stroke-width="2"/>
+                                <line x1="50" y1="50" x2="50" y2="20" stroke="#C5A059" stroke-width="2.5" class="clock-hand hour-hand"/>
+                                <line x1="50" y1="50" x2="75" y2="50" stroke="#C5A059" stroke-width="1.5" class="clock-hand minute-hand"/>
+                            </svg>
+                        </div>
+                    </div>
+                    
+                    <!-- Scene 8: Church Arrival -->
+                    <div class="trailer-scene scene-8">
+                        <div class="church-drone-zoom-in">
+                            <svg viewBox="0 0 200 200" class="church-svg closer">
+                                <rect x="50" y="50" width="100" height="110" fill="#FAF6F0" stroke="#C5A059" stroke-width="2"/>
+                                <path d="M50,50 L100,10 L150,50 Z" fill="#C5A059"/>
+                                <line x1="100" y1="10" x2="100" y2="-5" stroke="#C5A059" stroke-width="3"/>
+                                <line x1="90" y1="-5" x2="110" y2="-5" stroke="#C5A059" stroke-width="3"/>
+                                <rect x="85" y="100" width="30" height="60" fill="#FAF6F0" stroke="#C5A059" stroke-width="2"/>
+                            </svg>
+                        </div>
+                    </div>
+                    
+                    <!-- Scene 9: Celebration Continues -->
+                    <div class="trailer-scene scene-9">
+                        <div class="luxury-dining-silhouette"></div>
+                    </div>
+                    
+                    <!-- Scene 10: Grand Climax -->
+                    <div class="trailer-scene scene-10">
+                        <div class="clouds-climax-open"></div>
+                        <div class="climax-cross-zoom">
+                            <svg viewBox="0 0 100 100" class="gold-cross-icon climax-glow">
+                                <path d="M50 5v90M20 35h60" stroke="#C5A059" stroke-width="6" stroke-linecap="round"/>
+                                <circle cx="50" cy="35" r="12" fill="none" stroke="#C5A059" stroke-width="2"/>
+                            </svg>
+                        </div>
+                        <div class="climax-rings-rotate">
+                            <svg viewBox="0 0 100 60" class="interlocking-rings-gold">
+                                <ellipse cx="38" cy="30" rx="20" ry="14" fill="none" stroke="#C5A059" stroke-width="3" transform="rotate(-15 38 30)"/>
+                                <ellipse cx="62" cy="30" rx="20" ry="14" fill="none" stroke="#C5A059" stroke-width="3" transform="rotate(15 62 30)"/>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Subtitle / Typography Overlay (Updates dynamically) -->
+                <div class="trailer-subtitles" id="trailerSubtitles"></div>
+                
+                <!-- Animated Canvas Layer for local particles inside the viewport -->
+                <canvas id="trailerCanvas"></canvas>
+                
+                <!-- HUD Controls Overlay -->
+                <div class="trailer-hud">
+                    <div class="trailer-progress-container" id="trailerProgressContainer">
+                        <div class="trailer-progress-bar" id="trailerProgressBar"></div>
+                    </div>
+                    
+                    <div class="trailer-controls-row">
+                        <button class="hud-btn" id="trailerPlayPauseBtn" aria-label="Play/Pause">
+                            <!-- Play Icon -->
+                            <svg id="hudPlayIcon" class="hud-icon hidden" viewBox="0 0 24 24"><path fill="currentColor" d="M8,5.14V19.14L19,12.14L8,5.14Z"/></svg>
+                            <!-- Pause Icon -->
+                            <svg id="hudPauseIcon" class="hud-icon" viewBox="0 0 24 24"><path fill="currentColor" d="M14,19H18V5H14M6,19H10V5H6V19Z"/></svg>
+                        </button>
+                        
+                        <button class="hud-btn" id="trailerMuteBtn" aria-label="Mute">
+                            <!-- Unmute Icon -->
+                            <svg id="hudSpeakerOn" class="hud-icon" viewBox="0 0 24 24"><path fill="currentColor" d="M14,3.23V5.29C16.89,6.15 19,8.83 19,12C19,15.17 16.89,17.85 14,18.71V20.77C18,19.86 21,16.28 21,12C21,7.72 18,4.14 14,3.23M16.5,12C16.5,10.23 15.5,8.71 14,7.97V16C15.5,15.29 16.5,13.77 16.5,12M3,9V15H7L12,20V4L7,9H3Z"/></svg>
+                            <!-- Mute Icon -->
+                            <svg id="hudSpeakerOff" class="hud-icon hidden" viewBox="0 0 24 24"><path fill="currentColor" d="M3.27,1.84L1.9,3.21L8.29,9.6H3V15H7L12,20V13.31L16.25,17.56C15.58,18.04 14.83,18.41 14,18.66V20.72C15.38,20.44 16.63,19.78 17.68,18.99L20.79,22.1L22.2,20.69L3.27,1.84M12,4L9.91,6.09L12,8.18V4M14,3.23V5.29C14.89,5.56 15.73,6 16.47,6.6L17.93,5.14C16.8,4.17 15.47,3.5 14,3.23M16.5,12C16.5,12.78 16.19,13.47 15.71,14L17.2,15.49C18,14.5 18.5,13.31 18.5,12C18.5,8.83 16.39,6.15 13.5,5.29V7.35C15.24,8.14 16.5,9.92 16.5,12Z"/></svg>
+                        </button>
+                        
+                        <!-- Scene Navigation Indicators -->
+                        <div class="trailer-scene-dots" id="trailerSceneDots">
+                            <span class="scene-dot active" data-scene="0" title="Scene 1"></span>
+                            <span class="scene-dot" data-scene="1" title="Scene 2"></span>
+                            <span class="scene-dot" data-scene="2" title="Scene 3"></span>
+                            <span class="scene-dot" data-scene="3" title="Scene 4"></span>
+                            <span class="scene-dot" data-scene="4" title="Scene 5"></span>
+                            <span class="scene-dot" data-scene="5" title="Scene 6"></span>
+                            <span class="scene-dot" data-scene="6" title="Scene 7"></span>
+                            <span class="scene-dot" data-scene="7" title="Scene 8"></span>
+                            <span class="scene-dot" data-scene="8" title="Scene 9"></span>
+                            <span class="scene-dot" data-scene="9" title="Scene 10"></span>
+                        </div>
+                        
+                        <button class="hud-skip-btn" id="trailerSkipBtn">Skip</button>
+                    </div>
                 </div>
             </div>
 
@@ -335,7 +522,7 @@
                         <div class="family-names climax-hosts">
                             <p class="invited-by-label" style="font-family: var(--font-body); font-size: 0.85rem; color: var(--gold-dark); text-transform: uppercase; letter-spacing: 2px; margin-bottom: 8px;">Invited By</p>
                             <h4 class="mother-name" style="font-family: var(--font-heading); font-size: 1.4rem; font-weight: 500; color: var(--text-dark); margin-bottom: 4px;">Mrs. Mamidi Vedamani</h4>
-                            <p class="father-name dead-host" style="font-family: var(--font-heading); font-size: 1.15rem; color: var(--text-muted); margin-bottom: 0;">Late Mr. Mamidi Prasad</p>
+                            <p class="father-name dead-host" style="font-family: var(--font-heading); font-size: 1.15rem; color: var(--text-muted); margin-bottom: 0;">Mr. Mamidi Prasad</p>
                         </div>
                         
                         <div class="gold-line-divider" style="margin: 20px auto; width: 80px;"></div>
