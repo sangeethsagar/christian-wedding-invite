@@ -412,8 +412,21 @@ body, html {
     color: var(--text-muted);
     font-style: italic;
     line-height: 1.5;
-    margin-bottom: 28px;
+    margin-bottom: 12px;
     padding: 0 10px;
+}
+
+.cover-tagline {
+    font-family: var(--font-body);
+    font-size: 0.85rem;
+    color: var(--gold-dark);
+    font-weight: 500;
+    font-style: normal;
+    letter-spacing: 0.5px;
+    margin-top: 10px;
+    margin-bottom: 28px;
+    line-height: 1.4;
+    padding: 0 15px;
 }
 
 .verse-ref {
