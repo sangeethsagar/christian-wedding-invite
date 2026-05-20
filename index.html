@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mamidi's Wedding Invitation - China Subba Rao & Soni</title>
+    <meta name="description" content="Holy Matrimony of China Subba Rao & Soni on Saturday, 30th May 2026. Join us in celebrating our union under God's grace.">
+    
+    <!-- Google Fonts: Premium Typography for Thalassa Aesthetic -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500&family=Manrope:wght@300;400;500;600;700&family=Pinyon+Script&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Full-screen Canvas Background behind the Mockup -->
+    <canvas id="particleCanvas"></canvas>
+    <div class="glass-bg-effect"></div>
+
+    <!-- Premium Mobile Mockup Wrapper for Desktop centering -->
+    <div class="phone-mockup-wrapper">
+        <div class="phone-frame">
+            
+            <!-- Floating Music Panel (inside the frame) -->
+            <div class="audio-panel hidden" id="audioPanel">
+                <button id="muteBtn" class="audio-btn" aria-label="Toggle Sound">
+                    <svg id="speakerOn" class="icon" viewBox="0 0 24 24">
+                        <path fill="currentColor" d="M14,3.23V5.29C16.89,6.15 19,8.83 19,12C19,15.17 16.89,17.85 14,18.71V20.77C18,19.86 21,16.28 21,12C21,7.72 18,4.14 14,3.23M16.5,12C16.5,10.23 15.5,8.71 14,7.97V16C15.5,15.29 16.5,13.77 16.5,12M3,9V15H7L12,20V4L7,9H3Z" />
+                    </svg>
+                    <svg id="speakerOff" class="icon hidden" viewBox="0 0 24 24">
+                        <path fill="currentColor" d="M3.27,1.84L1.9,3.21L8.29,9.6H3V15H7L12,20V13.31L16.25,17.56C15.58,18.04 14.83,18.41 14,18.66V20.72C15.38,20.44 16.63,19.78 17.68,18.99L20.79,22.1L22.2,20.69L3.27,1.84M12,4L9.91,6.09L12,8.18V4M14,3.23V5.29C14.89,5.56 15.73,6 16.47,6.6L17.93,5.14C16.8,4.17 15.47,3.5 14,3.23M16.5,12C16.5,12.78 16.19,13.47 15.71,14L17.2,15.49C18,14.5 18.5,13.31 18.5,12C18.5,8.83 16.39,6.15 13.5,5.29V7.35C15.24,8.14 16.5,9.92 16.5,12Z" />
+                    </svg>
+                </button>
+                <div class="pulse-bars">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+
+            <!-- Floating Doves Container -->
+            <div id="dovesContainer"></div>
+
+            <!-- ================= 1. COVER SCREEN OVERLAY ================= -->
+            <div class="cover-screen" id="coverScreen">
+                <div class="cover-card">
+                    <div class="corner-border corner-tl"></div>
+                    <div class="corner-border corner-tr"></div>
+                    <div class="corner-border corner-bl"></div>
+                    <div class="corner-border corner-br"></div>
+
+                    <div class="cover-header">
+                        <span class="script-subtitle">The Wedding Invitation of</span>
+                        <h1 class="main-title">China Subba Rao<br><span class="and-symbol">&</span><br>Soni</h1>
+                        
+                        <div class="divider-cross">
+                            <svg viewBox="0 0 100 100" class="gold-cross-icon">
+                                <path d="M50 15v70M30 35h40" stroke="#C5A059" stroke-width="4" stroke-linecap="round"/>
+                                <path d="M47 32h6v6h-6zm0 -18h6v3h-6zm0 68h6v3h-6zM26 32v6h3v-6z" fill="#C5A059"/>
+                                <circle cx="50" cy="35" r="8" fill="none" stroke="#C5A059" stroke-width="1.5" stroke-dasharray="2, 2"/>
+                            </svg>
+                        </div>
+                        
+                        <p class="cover-date">Saturday, 30th May 2026</p>
+                        <p class="cover-verse">"Therefore what God has joined together, let no one separate."<br><span class="verse-ref">— Mark 10:9</span></p>
+                    </div>
+                    
+                    <button class="play-invitation-btn" id="playBtn" aria-label="Enter and Open Invitation">
+                        <span class="btn-ripple"></span>
+                        <span class="btn-text">Open Invitation</span>
+                    </button>
+                    <p class="btn-note">Turn on your audio for worship instrumental</p>
+                </div>
+            </div>
+
+            <!-- ================= 2. MAIN SCROLLABLE CONTAINER ================= -->
+            <div class="main-scroll-container hidden" id="mainScrollContainer">
+                
+                <!-- HERO SECTION -->
+                <section class="scroll-section hero-section reveal">
+                    <div class="hero-floral-frame">
+                        <div class="dove-embellish">
+                            <svg viewBox="0 0 100 100" class="gold-cross-icon small">
+                                <path d="M50 20v60M35 38h30" stroke="#C5A059" stroke-width="3" stroke-linecap="round"/>
+                                <circle cx="50" cy="38" r="6" fill="none" stroke="#C5A059" stroke-width="1"/>
+                            </svg>
+                        </div>
+                        <p class="hymn-quote">"Two Hearts... Two Families... One Blessed Union Under God's Grace."</p>
+                        <div class="gold-leaf-divider"></div>
+                        <h2 class="couple-title-big">Subba Rao<br><span class="and-script">&</span><br>Soni</h2>
+                        <p class="wedding-headline-date">Saturday, May 30, 2026</p>
+                        <div class="scroll-indicator">
+                            <span class="arrow-down"></span>
+                            <span class="indicator-text">Scroll Down</span>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- BIBLE VERSE SECTION -->
+                <section class="scroll-section verse-section reveal">
+                    <div class="elegant-card text-center">
+                        <div class="open-bible-container">
+                            <div class="rays-glow"></div>
+                            <svg viewBox="0 0 120 80" class="open-bible-svg">
+                                <path d="M60,70 C45,65 20,65 10,67 L10,17 C20,15 45,15 60,20 Z" fill="#ffffff" stroke="#C5A059" stroke-width="1.5"/>
+                                <path d="M60,70 C75,65 100,65 110,67 L110,17 C100,15 75,15 60,20 Z" fill="#ffffff" stroke="#C5A059" stroke-width="1.5"/>
+                                <path d="M60,20 L60,75 L63,72 L66,75 L66,20 Z" fill="#C5A059"/>
+                                <path d="M18,27 H48 M18,35 H45 M18,43 H48 M18,51 H42 M18,59 H47" stroke="#e9decb" stroke-width="1.5" stroke-linecap="round"/>
+                                <path d="M72,27 H102 M72,35 H99 M72,43 H102 M72,51 H96 M72,59 H101" stroke="#e9decb" stroke-width="1.5" stroke-linecap="round"/>
+                            </svg>
+                        </div>
+                        <blockquote class="scripture-blockquote">
+                            "The thing comes from the Lord."
+                        </blockquote>
+                        <cite class="scripture-ref">— Genesis 24:50</cite>
+                    </div>
+                </section>
+
+                <!-- INVITATION TEXT / HOSTS SECTION -->
+                <section class="scroll-section host-section reveal">
+                    <div class="elegant-card text-center">
+                        <span class="family-badge">Mamidi's Wedding Invitation</span>
+                        <h3 class="host-header">We solicit your gracious presence & blessings</h3>
+                        <p class="host-details">
+                            with family and friends on the auspicious occasion of the Holy Matrimony of our youngest son
+                        </p>
+                        <div class="gold-line-divider"></div>
+                        <div class="family-names">
+                            <p class="invited-by-label">Invited By</p>
+                            <h4 class="mother-name">Mrs. Mamidi Vedamani</h4>
+                            <p class="father-name dead-host">Late Mr. Mamidi Prasad</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- COUPE REVEAL SECTION -->
+                <section class="scroll-section couple-section reveal">
+                    <div class="elegant-card text-center">
+                        <div class="groom-block">
+                            <span class="person-tag">Groom</span>
+                            <h3 class="person-name">China Subba Rao</h3>
+                            <p class="person-tagline">Youngest Son of Mamidi Family</p>
+                        </div>
+
+                        <div class="connector-block">
+                            <div class="rings-animation-holder">
+                                <svg viewBox="0 0 100 60" class="interlocking-rings">
+                                    <ellipse cx="38" cy="30" rx="20" ry="14" fill="none" stroke="#C5A059" stroke-width="2.5" transform="rotate(-15 38 30)"/>
+                                    <ellipse cx="62" cy="30" rx="20" ry="14" fill="none" stroke="#C5A059" stroke-width="2.5" transform="rotate(15 62 30)"/>
+                                </svg>
+                            </div>
+                            <span class="with-script">with</span>
+                        </div>
+
+                        <div class="bride-block">
+                            <span class="person-tag">Bride</span>
+                            <h3 class="person-name">Soni</h3>
+                            <p class="bride-parentage">
+                                Youngest Daughter of <br>
+                                <strong>Mr. Kalintha Israel & Mrs. Suneetha</strong><br>
+                                <span class="residence-badge">Doppalapudi</span>
+                            </p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- EVENTS TIMELINE SECTION -->
+                <section class="scroll-section events-section reveal">
+                    <h3 class="events-section-title text-center">Wedding Celebrations</h3>
+                    
+                    <!-- EVENT 1: Holy Matrimony -->
+                    <div class="event-card reveal">
+                        <div class="card-corner-accent"></div>
+                        <div class="event-icon-badge">
+                            <svg viewBox="0 0 100 100" class="event-badge-svg">
+                                <path d="M50,10 L50,25 M42,17 H58" stroke="#C5A059" stroke-width="2"/>
+                                <path d="M50,25 L25,55 H75 Z" fill="none" stroke="#C5A059" stroke-width="2"/>
+                                <path d="M30,55 V90 H70 V55 Z" fill="none" stroke="#C5A059" stroke-width="2"/>
+                                <circle cx="50" cy="70" r="8" fill="none" stroke="#C5A059" stroke-width="1.5"/>
+                            </svg>
+                        </div>
+                        <h4 class="event-name">Holy Matrimony</h4>
+                        <div class="event-time-row">
+                            <span class="ev-date">Saturday, 30th May 2026</span>
+                            <span class="ev-time">10:30 A.M.</span>
+                        </div>
+                        <h5 class="event-venue-title">Christ Roopanthara Lutheran Church</h5>
+                        <p class="event-address">
+                            Kondapatur Village, Kakumanu Mandal,<br>Guntur District, Andhra Pradesh
+                        </p>
+                        <div class="event-actions">
+                            <a href="https://www.google.com/maps/search/?api=1&query=Christ+Roopanthara+Lutheran+Church+Kondapatur" target="_blank" rel="noopener" class="action-btn map-btn">
+                                <svg class="btn-icon" viewBox="0 0 24 24"><path fill="currentColor" d="M12,2A10,10 0 0,0 2,12C2,17.25 12,22 12,22C12,22 22,17.25 22,12A10,10 0 0,0 12,2M12,6A4,4 0 0,1 16,10C16,12.2 12,17 12,17C12,17 8,12.2 8,10A4,4 0 0,1 12,6M12,8A2,2 0 0,0 10,10A2,2 0 0,0 12,12A2,2 0 0,0 14,10A2,2 0 0,0 12,8Z"/></svg>
+                                Map Route
+                            </a>
+                            <button class="action-btn calendar-btn" id="addMatrimonyCalendar">
+                                <svg class="btn-icon" viewBox="0 0 24 24"><path fill="currentColor" d="M19,19H5V8H19M16,1V3H8V1H6V3H5C3.89,3 3,3.9 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V5C21,3.9 20.1,3 19,3H18V1M17,12H12V17H17V12Z"/></svg>
+                                Add to Calendar
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- EVENT 2: Lunch Reception -->
+                    <div class="event-card reveal">
+                        <div class="card-corner-accent"></div>
+                        <div class="event-icon-badge">
+                            <svg viewBox="0 0 100 100" class="event-badge-svg">
+                                <circle cx="50" cy="50" r="30" fill="none" stroke="#C5A059" stroke-width="2" stroke-dasharray="6,3"/>
+                                <path d="M35,35 V52 M35,52 V65 M31,35 V42 M39,35 V42" stroke="#C5A059" stroke-width="2"/>
+                                <path d="M65,35 L65,52 M65,52 V65 M65,35 C62,38 62,48 65,52" stroke="#C5A059" stroke-width="2"/>
+                            </svg>
+                        </div>
+                        <h4 class="event-name">Lunch Reception</h4>
+                        <div class="event-time-row">
+                            <span class="ev-date">Saturday, 30th May 2026</span>
+                            <span class="ev-time">12:30 P.M. Onwards</span>
+                        </div>
+                        <h5 class="event-venue-title">At Our Residence</h5>
+                        <p class="event-address">
+                            Kondapatur Village, Kakumanu Mandal,<br>Guntur District, Andhra Pradesh
+                        </p>
+                        <div class="event-actions">
+                            <a href="https://www.google.com/maps/search/?api=1&query=Kondapatur+Village+Kakumanu+Mandal" target="_blank" rel="noopener" class="action-btn map-btn">
+                                <svg class="btn-icon" viewBox="0 0 24 24"><path fill="currentColor" d="M12,2A10,10 0 0,0 2,12C2,17.25 12,22 12,22C12,22 22,17.25 22,12A10,10 0 0,0 12,2M12,6A4,4 0 0,1 16,10C16,12.2 12,17 12,17C12,17 8,12.2 8,10A4,4 0 0,1 12,6M12,8A2,2 0 0,0 10,10A2,2 0 0,0 12,12A2,2 0 0,0 14,10A2,2 0 0,0 12,8Z"/></svg>
+                                Map Route
+                            </a>
+                            <button class="action-btn calendar-btn" id="addLunchCalendar">
+                                <svg class="btn-icon" viewBox="0 0 24 24"><path fill="currentColor" d="M19,19H5V8H19M16,1V3H8V1H6V3H5C3.89,3 3,3.9 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V5C21,3.9 20.1,3 19,3H18V1M17,12H12V17H17V12Z"/></svg>
+                                Add to Calendar
+                            </button>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- BIBLE BLESSING SECTION (Mark 10:9) -->
+                <section class="scroll-section blessing-verse-section reveal">
+                    <div class="elegant-card text-center text-secondary">
+                        <blockquote class="bible-blessing-quote">
+                            "Therefore what God has joined together, let no one separate."
+                        </blockquote>
+                        <cite class="bible-blessing-ref">— Mark 10:9</cite>
+                    </div>
+                </section>
+
+                <!-- COUNTDOWN TIMER SECTION -->
+                <section class="scroll-section countdown-section reveal">
+                    <div class="elegant-card text-center gold-accent-bg">
+                        <h3 class="countdown-title">The Celebration Begins In</h3>
+                        <div class="countdown-grid">
+                            <div class="countdown-item">
+                                <span class="time-num" id="days">00</span>
+                                <span class="time-label">Days</span>
+                            </div>
+                            <div class="countdown-item">
+                                <span class="time-num" id="hours">00</span>
+                                <span class="time-label">Hrs</span>
+                            </div>
+                            <div class="countdown-item">
+                                <span class="time-num" id="minutes">00</span>
+                                <span class="time-label">Mins</span>
+                            </div>
+                            <div class="countdown-item">
+                                <span class="time-num" id="seconds">00</span>
+                                <span class="time-label">Secs</span>
+                            </div>
+                        </div>
+                        <p class="countdown-footer-msg">Our families look forward to welcoming you.</p>
+                    </div>
+                </section>
+
+                <!-- THINGS TO KNOW SECTION (GRID) -->
+                <section class="scroll-section info-section reveal">
+                    <h3 class="info-section-title text-center">Things To Know</h3>
+                    <p class="info-section-desc text-center">To help you enjoy every moment, here are some key details.</p>
+                    
+                    <div class="info-grid">
+                        <div class="info-item-card reveal">
+                            <div class="info-icon">👔</div>
+                            <h4>Dress Code</h4>
+                            <p>Semi-Formal or elegant White & Gold attire is appreciated.</p>
+                        </div>
+                        <div class="info-item-card reveal">
+                            <div class="info-icon">🅿</div>
+                            <h4>Parking</h4>
+                            <p>Valet parking is available for all guests at the church.</p>
+                        </div>
+                        <div class="info-item-card reveal">
+                            <div class="info-icon">⛅</div>
+                            <h4>Weather</h4>
+                            <p>Tropical warm weather. The ceremony will be indoors with cooling.</p>
+                        </div>
+                        <div class="info-item-card reveal">
+                            <div class="info-icon">📷</div>
+                            <h4>Instagram</h4>
+                            <p>Share your moments using hashtag <strong>#SoniSubbuWedding</strong></p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- EMBEDDED RSVP & WISHES SECTION -->
+                <section class="scroll-section rsvp-section reveal" id="rsvpSection">
+                    <div class="elegant-card form-card">
+                        <h3 class="form-title text-center">RSVP & Send Blessings</h3>
+                        <p class="form-subtitle text-center">Share your response and warm wishes with China Subba Rao & Soni</p>
+                        
+                        <form id="rsvpForm">
+                            <div class="form-group">
+                                <label for="guestName">Your Name(s)</label>
+                                <input type="text" id="guestName" required placeholder="e.g., Mr. & Mrs. John Doe" maxlength="60">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label>Attendance Status</label>
+                                <div class="radio-group">
+                                    <label class="radio-container">
+                                        <input type="radio" name="attending" value="yes" checked>
+                                        <span class="checkmark"></span>
+                                        Joyfully Attend
+                                    </label>
+                                    <label class="radio-container">
+                                        <input type="radio" name="attending" value="no">
+                                        <span class="checkmark"></span>
+                                        Regretfully Decline
+                                    </label>
+                                </div>
+                            </div>
+                            
+                            <div class="form-group" id="guestCountGroup">
+                                <label for="guestCount">Number of Guests</label>
+                                <select id="guestCount">
+                                    <option value="1">1 Person</option>
+                                    <option value="2" selected>2 People</option>
+                                    <option value="3">3 People</option>
+                                    <option value="4">4 People</option>
+                                    <option value="5+">5+ People</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="wishes">Wishes / Blessings</label>
+                                <textarea id="wishes" placeholder="Write your warm wishes here..." rows="4" maxlength="250"></textarea>
+                            </div>
+                            
+                            <button type="submit" class="submit-rsvp-btn" id="rsvpSubmitBtn">Submit Blessings</button>
+                        </form>
+                        
+                        <div id="rsvpSuccessMsg" class="hidden text-center success-box">
+                            <svg viewBox="0 0 24 24" class="success-check-icon"><path fill="#C5A059" d="M12 2C6.5 2 2 6.5 2 12S6.5 22 12 22 22 17.5 22 12 17.5 2 12 2M10 17L5 12L6.41 10.59L10 14.17L17.59 6.58L19 8L10 17Z"/></svg>
+                            <h3>Thank You!</h3>
+                            <p>Your blessings and attendance details have been successfully saved.</p>
+                            <button class="action-btn reset-form-btn" id="resetRsvpBtn">Submit Another Response</button>
+                        </div>
+                    </div>
+
+                    <!-- Wishes Scroller Feed -->
+                    <div class="wishes-guestbook reveal">
+                        <h4 class="guestbook-title text-center">Wishes from Near & Dear</h4>
+                        <div class="wishes-scroller" id="wishesScroller">
+                            <!-- Populated Dynamically -->
+                        </div>
+                    </div>
+                </section>
+
+                <!-- FOOTER / SHARE SECTION -->
+                <footer class="scroll-section footer-section reveal">
+                    <p class="footer-blessing text-center">
+                        "Your presence and prayers will make our celebration complete."
+                    </p>
+                    <div class="footer-actions text-center">
+                        <button class="action-btn share-invite-btn" id="whatsappShareBtn">
+                            <svg class="btn-icon" viewBox="0 0 24 24"><path fill="currentColor" d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.817 9.817 0 0 0 12.04 2m.01 1.67c2.2 0 4.26.86 5.82 2.42a8.188 8.188 0 0 1 2.41 5.83c0 4.52-3.68 8.2-8.2 8.2-1.48 0-2.93-.4-4.19-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.176 8.176 0 0 1-1.25-4.34c-.01-4.52 3.67-8.2 8.2-8.2m-3.86 4.74c-.21 0-.45.08-.65.29-.2.22-.77.75-.77 1.83 0 1.08.79 2.13.9 2.27.11.15 1.52 2.33 3.71 3.28.52.22.93.36 1.25.46.52.16 1 .14 1.37.08.42-.06 1.28-.52 1.46-1.03.18-.52.18-.96.12-1.03-.06-.07-.22-.11-.47-.24-.25-.13-1.46-.72-1.68-.8-.23-.08-.39-.12-.56.12-.17.25-.66.83-.81.99-.15.17-.31.19-.56.06-.25-.13-1.07-.39-2.03-1.25-.75-.67-1.26-1.5-1.4-1.76-.15-.26-.02-.4.11-.53.12-.11.25-.29.38-.44.13-.15.17-.25.25-.42.09-.17.04-.32-.02-.45-.06-.13-.56-1.35-.77-1.85-.2-.49-.41-.42-.56-.43-.14 0-.3-.01-.47-.01z"/></svg>
+                            Share on WhatsApp
+                        </button>
+                    </div>
+                    <div class="gold-line-divider small"></div>
+                    <p class="copyright text-center">© 2026 Mamidi's Wedding. Built with Love.</p>
+                </footer>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Script Application Logic -->
+    <script src="app.js"></script>
+</body>
+</html>
