@@ -777,7 +777,7 @@ document.getElementById('whatsappShareBtn').addEventListener('click', () => {
     const brideName = "Soni";
     const date = "Saturday, 30th May 2026";
     const time = "10:30 A.M";
-    const location = "Christ Roopanthara Lutheran Church, Kondapatur";
+    const location = "Lutheran Church(Kondapaturu), Kondapaturu, Andhra Pradesh";
     
     // Use public hosted URL if configured; fallback to browser URL for local testing
     let shareUrl = PUBLIC_DEPLOYMENT_URL;
